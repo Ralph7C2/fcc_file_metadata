@@ -1,0 +1,24 @@
+{
+  "name": "fcc_file_metadata",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "express": "^4.14.0",
+    "multer": "^1.2.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ralph7C2/fcc_file_metadata.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Ralph7C2/fcc_file_metadata/issues"
+  },
+  "homepage": "https://github.com/Ralph7C2/fcc_file_metadata#readme"
+}
