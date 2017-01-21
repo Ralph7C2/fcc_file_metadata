@@ -20,7 +20,7 @@ app.post('/get-file-size', function(req, res) {
 	});	
 });
 
-var port = process.env.PORT | 4040;
+var port = process.env.PORT || 4040;
 app.listen(port, function() {
 	console.log("Ready to rock on port "+port);
 });
