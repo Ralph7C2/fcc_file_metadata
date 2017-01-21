@@ -1,5 +1,6 @@
 const express = require('express');
 const multer = require('multer');
+const fs = require('fs');
 
 var upload = multer({dest : 'uploads/'}).single('file');
 
@@ -13,7 +14,15 @@ app.post('/get-file-size', function(req, res) {
 			console.log(err);
 		} 
 		if(req.file) {
-			res.json({size: req.file.size});
+			console.log(req.file.path);
+			var size = req.file.size;
+			fs.stat(req.file.path, function(err, stats) {
+				if(err) return console.log(err);
+				fs.unlink(req.file.path, function(err) {
+					if(err) return console.log(err);
+				});
+			});
+			res.json({size: size});
 		} else {
 			res.json({error:"Error"});
 		}
